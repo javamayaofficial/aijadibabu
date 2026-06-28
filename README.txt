@@ -39,9 +39,11 @@ CARA MEMAKAI APLIKASI
    - Risiko Implementasi
    - Mengapa Kami Menyarankan QUICK
    - Rekomendasi untuk Anda
-6. Di App Builder, versi yang terbuka saat ini adalah QUICK.
-7. Klik "Buat Super Prompt".
-8. Salin ketiga prompt, lalu tempel satu per satu ke Claude.
+6. Di App Builder, versi QUICK dan GROWTH terbuka penuh.
+7. Versi PRO mendapat jatah 5 kali generate per browser/device.
+8. Jika kuota PRO habis, pengguna akan diarahkan untuk upgrade.
+9. Klik "Buat Super Prompt".
+10. Salin ketiga prompt, lalu tempel satu per satu ke Claude.
 
 
 CARA GANTI NOMOR WHATSAPP
