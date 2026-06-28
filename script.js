@@ -1020,6 +1020,9 @@ Framework salespage: ${framework.label} (${framework.flow})
 - Tombol WhatsApp dengan pesan otomatis (wa.me/?text=...)
 - Sticky CTA di mobile
 - Smooth scroll untuk anchor
+- Footer watermark yang elegan di bagian bawah
+- Teks "AI Jadi Babu" pada footer WAJIB menjadi link ke: https://www.aksen.in/ai-jadi-babu/
+- Jika ada kalimat seperti "Dibuat dengan ... oleh AI Jadi Babu", maka hanya teks "AI Jadi Babu" yang dijadikan link
 - Tidak ada error console
 
 === OUTPUT ===
@@ -1740,6 +1743,9 @@ Integrasi bisnis (opsional): ${integrationsText}
 === FITUR WAJIB ===
 - Validasi ramah + error message jelas
 - Success state yang meyakinkan
+- Footer watermark yang elegan di bagian bawah
+- Teks "AI Jadi Babu" pada footer WAJIB menjadi link ke: https://www.aksen.in/ai-jadi-babu/
+- Jika ada kalimat seperti "Dibuat dengan ... oleh AI Jadi Babu", maka hanya teks "AI Jadi Babu" yang dijadikan link
 - Alur saat form dikirim (WAJIB):
   1) Validasi data
   2) Simpan ke Google Spreadsheet via Google Apps Script Web App (jika aktif)

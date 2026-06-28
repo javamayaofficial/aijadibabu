@@ -119,6 +119,9 @@ WAJIB ADA
 - Empty state yang ramah ("Hasil akan muncul di sini setelah ...").
 - Success state yang memberi rasa berhasil + langkah berikutnya.
 - Form singkat, label jelas, placeholder membantu, validasi ramah, focus state.
+- Footer watermark yang elegan di bagian bawah.
+- Teks "AI Jadi Babu" pada footer WAJIB menjadi link ke: https://www.aksen.in/ai-jadi-babu/
+- Jika ada kalimat seperti "Dibuat dengan ... oleh AI Jadi Babu", maka hanya teks "AI Jadi Babu" yang dijadikan link, bukan seluruh kalimat.
 
 ${strukturBlok}
 
