@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Jadi Babu</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230f172a'/%3E%3Cpath d='M18 46V18h8l20 27V18h8v28h-8L26 19v27z' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <meta name="description" content="AI Jadi Babu membantu Anda menyusun App Builder, Salespage Builder, dan Form Builder dengan alur yang lebih cepat dan fokus." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-brain" viewBox="0 0 24 24">
+      <path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 2.83A3 3 0 0 0 6 13.6V15a3 3 0 0 0 3 3h1v2" />
+      <path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 2 2.83A3 3 0 0 1 18 13.6V15a3 3 0 0 1-3 3h-1v2" />
+      <path d="M9 8a2.5 2.5 0 0 1 3-2.45A2.5 2.5 0 0 1 15 8a2.5 2.5 0 0 1-3 2.45A2.5 2.5 0 0 1 9 8Z" />
+      <path d="M8 12a2.5 2.5 0 0 0 4 2 2.5 2.5 0 0 0 4-2" />
+    </symbol>
+    <symbol id="icon-clipboard" viewBox="0 0 24 24">
+      <rect x="7" y="4" width="10" height="16" rx="2" />
+      <path d="M10 4.5h4a1.5 1.5 0 0 0-3 0Z" />
+      <path d="M9.5 10h5M9.5 14h5" />
+    </symbol>
+    <symbol id="icon-rocket" viewBox="0 0 24 24">
+      <path d="M14.5 4.5c2.6.2 4.8 2.4 5 5-2 2.5-4.4 4.9-7 7l-3-3c2.1-2.6 4.5-5 7-7Z" />
+      <path d="M8 14l2 2-3 3H5v-2Z" />
+      <path d="M14 10h.01" />
+      <path d="M7.5 12.5 5 10c.3-1.5 1.5-2.7 3-3l1.5 1.5M11.5 16.5 14 19c1.5-.3 2.7-1.5 3-3l-1.5-1.5" />
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <rect x="7" y="3.5" width="10" height="17" rx="2.5" />
+      <path d="M10 6h4M11 17.5h2" />
+    </symbol>
+    <symbol id="icon-page" viewBox="0 0 24 24">
+      <path d="M7 4h7l4 4v12H7z" />
+      <path d="M14 4v4h4M9 12h6M9 16h6" />
+    </symbol>
+    <symbol id="icon-form" viewBox="0 0 24 24">
+      <rect x="5" y="4" width="14" height="16" rx="2" />
+      <path d="M8 8h8M8 12h4M8 16h8" />
+      <path d="m15 12 1.5 1.5L19 11" />
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24">
+      <path d="m12 5 8 4-8 4-8-4Z" />
+      <path d="m4 12 8 4 8-4M4 15 12 19l8-4" />
+    </symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24">
+      <path d="m12 3 1.2 3.3L16.5 7.5l-3.3 1.2L12 12l-1.2-3.3L7.5 7.5l3.3-1.2Z" />
+      <path d="m18 13 .8 2.2L21 16l-2.2.8L18 19l-.8-2.2L15 16l2.2-.8Z" />
+      <path d="m6 14 .7 1.8L8.5 16l-1.8.7L6 18.5l-.7-1.8L3.5 16l1.8-.7Z" />
+    </symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="7" />
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 2v3M22 12h-3M12 22v-3M2 12h3" />
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="15" rx="2" />
+      <path d="M8 3v4M16 3v4M4 9h16M8 13h3M8 17h5" />
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l-1 11H7Z" />
+      <path d="M9 8a3 3 0 0 1 6 0M10 12h4" />
+    </symbol>
+    <symbol id="icon-repeat" viewBox="0 0 24 24">
+      <path d="M7 7h10l-2-2M17 17H7l2 2M17 7l3 3-3 3M7 17l-3-3 3-3" />
+    </symbol>
+    <symbol id="icon-bolt" viewBox="0 0 24 24">
+      <path d="M13 2 6 13h5l-1 9 8-12h-5Z" />
+    </symbol>
+    <symbol id="icon-robot" viewBox="0 0 24 24">
+      <rect x="6" y="8" width="12" height="10" rx="3" />
+      <path d="M12 4v4M9 12h.01M15 12h.01M9 18v2M15 18v2M6 13H4M20 13h-2" />
+    </symbol>
+    <symbol id="icon-tools" viewBox="0 0 24 24">
+      <path d="m14 5 5 5M12 7l5 5M5 19l6-6M4 14l6 6" />
+      <path d="M15 4a3 3 0 0 0 4 4l-6 6-4-4Z" />
+    </symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8.5 12.5 2.5 2.5 4.5-5" />
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M6 7.5h12a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-6l-4.5 3v-3H6a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3Z" />
+      <path d="M8.5 12h7" />
+    </symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="12" rx="2" />
+      <path d="M3 10h18M7 14h4" />
+    </symbol>
+    <symbol id="icon-megaphone" viewBox="0 0 24 24">
+      <path d="M4 12h3l8-4v8l-8-4H4Z" />
+      <path d="M7 14v4a2 2 0 0 0 2 2h1M17 10a4 4 0 0 1 0 4" />
+    </symbol>
+    <symbol id="icon-dice" viewBox="0 0 24 24">
+      <rect x="5" y="5" width="14" height="14" rx="3" />
+      <path d="M9 9h.01M15 9h.01M9 15h.01M15 15h.01M12 12h.01" />
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24">
+      <path d="M20 11a8 8 0 1 0 1.2 4.3M20 4v7h-7" />
+    </symbol>
+    <symbol id="icon-spreadsheet" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <path d="M9 4v16M4 9h16M13 9h7M13 13h7M13 17h7" />
+    </symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24">
+      <path d="M5 19V9M12 19V5M19 19v-7M4 19h16" />
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1 1 0 0 0-1.1-.2 1 1 0 0 0-.6.9V20a2 2 0 1 1-4 0v-.2a1 1 0 0 0-.6-.9 1 1 0 0 0-1.1.2l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1 1 0 0 0 .2-1.1 1 1 0 0 0-.9-.6H4a2 2 0 1 1 0-4h.2a1 1 0 0 0 .9-.6 1 1 0 0 0-.2-1.1l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1 1 0 0 0 1.1.2 1 1 0 0 0 .6-.9V4a2 2 0 1 1 4 0v.2a1 1 0 0 0 .6.9 1 1 0 0 0 1.1-.2l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1 1 0 0 0-.2 1.1 1 1 0 0 0 .9.6H20a2 2 0 1 1 0 4h-.2a1 1 0 0 0-.9.6Z" />
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M12 3 5 6v5c0 4.5 2.8 7.9 7 10 4.2-2.1 7-5.5 7-10V6Z" />
+      <path d="m9.5 11.5 1.8 1.8 3.2-3.3" />
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M9 4h6l-1 5 3 3v1H7v-1l3-3Z" />
+      <path d="M12 13v7" />
+    </symbol>
+    <symbol id="icon-dna" viewBox="0 0 24 24">
+      <path d="M7 4c6 0 4 8 10 8M17 20c-6 0-4-8-10-8M8 6h8M8 18h8" />
+    </symbol>
+    <symbol id="icon-unlock" viewBox="0 0 24 24">
+      <rect x="5" y="11" width="14" height="9" rx="2" />
+      <path d="M9 11V8a3 3 0 0 1 6 0" />
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </symbol>
+    <symbol id="icon-trophy" viewBox="0 0 24 24">
+      <path d="M8 4h8v3a4 4 0 0 1-8 0Z" />
+      <path d="M8 5H5a2 2 0 0 0 2 3h1M16 5h3a2 2 0 0 1-2 3h-1M12 11v4M9 20h6M10 15h4v5h-4Z" />
+    </symbol>
+    <symbol id="icon-bulb" viewBox="0 0 24 24">
+      <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3 11.2V16h6v-1.8A6 6 0 0 0 12 3Z" />
+    </symbol>
+    <symbol id="icon-coins" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="7" rx="5" ry="2.5" />
+      <path d="M7 7v4c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V7M9 14v3c0 1.1 1.8 2 4 2s4-.9 4-2v-3" />
+    </symbol>
+    <symbol id="icon-warning" viewBox="0 0 24 24">
+      <path d="M12 4 3.5 19h17Z" />
+      <path d="M12 9v4M12 17h.01" />
+    </symbol>
+    <symbol id="icon-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m14.5 9.5-5 2 2 5 5-2Z" />
+    </symbol>
+    <symbol id="icon-graduation" viewBox="0 0 24 24">
+      <path d="m3 10 9-4 9 4-9 4Z" />
+      <path d="M7 12v4c0 1.7 2.2 3 5 3s5-1.3 5-3v-4M21 10v5" />
+    </symbol>
+    <symbol id="icon-stethoscope" viewBox="0 0 24 24">
+      <path d="M7 4v6a4 4 0 0 0 8 0V4M9 4h6M15 14v1a4 4 0 0 0 8 0 3 3 0 0 0-3-3h-1" />
+    </symbol>
+    <symbol id="icon-plane" viewBox="0 0 24 24">
+      <path d="m3 11 18-7-5 16-3-6-6-3Z" />
+    </symbol>
+    <symbol id="icon-ring" viewBox="0 0 24 24">
+      <circle cx="9" cy="14" r="4" />
+      <path d="M9 10V5l3-2 3 2v5" />
+      <path d="M13 14h6" />
+    </symbol>
+    <symbol id="icon-bowl" viewBox="0 0 24 24">
+      <path d="M4 12h16a8 8 0 0 1-16 0ZM8 8c.4-1 1.2-2 2.5-2M13 6c1.4 0 2.3 1 2.8 2" />
+    </symbol>
+    <symbol id="icon-wrench" viewBox="0 0 24 24">
+      <path d="M14 7a4 4 0 0 0 5 5l-8 8a2 2 0 1 1-3-3l8-8a4 4 0 0 0-2-7Z" />
+    </symbol>
+    <symbol id="icon-money" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="12" rx="2" />
+      <circle cx="12" cy="12" r="3" />
+      <path d="M7 9h.01M17 15h.01" />
+    </symbol>
+  </svg>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <span class="brand-mark">J</span>
+        <span class="brand-text">AI Jadi <span class="brand-sub">Babu</span></span>
+      </a>
+      <div class="header-actions">
+        <nav class="suite-nav" aria-label="Modul AI Jadi Babu">
+          <button class="suite-tab active" type="button" data-suite-tab="app">App Builder</button>
+          <button class="suite-tab" type="button" data-suite-tab="page">Salespage Builder</button>
+          <button class="suite-tab" type="button" data-suite-tab="form">Form Builder</button>
+        </nav>
+        <a href="#wizard" class="btn btn-ghost btn-sm" id="suiteStartBtn">Mulai</a>
+        <button class="btn btn-ghost btn-sm" type="button" id="logoutBtn" hidden>Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">AI Product Builder</span>
+      <h1 class="hero-title">Ubah ide liar jadi <span class="grad">aplikasi siap online</span></h1>
+      <p class="hero-sub">Ceritakan idemu. AI akan menganalisisnya seperti konsultan startup, lalu memberimu 3 super prompt siap pakai. Tanpa coding, tanpa ribet.</p>
+      <div class="hero-benefits">
+        <div class="benefit"><span class="benefit-ic">🧠</span> Validasi Ide Produk</div>
+        <div class="benefit"><span class="benefit-ic">📋</span> Blueprint Siap Eksekusi</div>
+        <div class="benefit"><span class="benefit-ic">🚀</span> Launch Lebih Cepat</div>
+      </div>
+
+      <a href="#wizard" class="btn btn-primary btn-lg" id="heroStartBtn">Mulai</a>
+    </div>
+  </section>
+
+  <!-- ===== SUITE PICKER ===== -->
+  <section class="suite-section" id="suite">
+    <div class="container">
+      <div class="suite-grid">
+        <button class="suite-card active" type="button" data-suite-tab="app">
+          <div class="suite-card-top">
+            <span class="suite-ic">📱</span>
+            <div>
+              <div class="suite-title">App Builder</div>
+              <div class="suite-tag">Ubah ide menjadi blueprint aplikasi yang siap dibangun.</div>
+            </div>
+          </div>
+          <div class="suite-desc">Output: Strategi Produk • PRD Lengkap • Developer Blueprint</div>
+        </button>
+
+        <button class="suite-card" type="button" data-suite-tab="page">
+          <div class="suite-card-top">
+            <span class="suite-ic">🧾</span>
+            <div>
+              <div class="suite-title">Salespage Builder</div>
+              <div class="suite-tag">Landing page yang dirancang untuk mengubah pengunjung menjadi pelanggan.</div>
+            </div>
+          </div>
+          <div class="suite-desc">Output: Positioning • Copywriting • Struktur Penjualan</div>
+        </button>
+
+        <button class="suite-card" type="button" data-suite-tab="form">
+          <div class="suite-card-top">
+            <span class="suite-ic">📝</span>
+            <div>
+              <div class="suite-title">Form Builder</div>
+              <div class="suite-tag">Form bisnis yang membantu mengumpulkan data dan mendorong tindakan.</div>
+            </div>
+          </div>
+          <div class="suite-desc">Output: Funnel Form • Logika Form • Integrasi Data</div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="suite-modules">
+    <div class="suite-module active" data-suite-module="app">
+
+      <!-- ===== NEXLA APP ===== -->
+      <section class="wizard-section" id="wizard">
+        <div class="container container-narrow">
+
+      <!-- Progress -->
+      <div class="progress" id="progress">
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-steps">
+          <span class="pstep active" data-p="1">Ide</span>
+          <span class="pstep" data-p="2">Nama</span>
+          <span class="pstep" data-p="3">Tujuan</span>
+          <span class="pstep" data-p="4">AI Review</span>
+          <span class="pstep" data-p="5">Generate</span>
+        </div>
+      </div>
+
+      <div class="card wizard-card">
+
+        <!-- STEP 1: IDE -->
+        <div class="wizard-panel active" data-step="1">
+          <span class="step-tag">Langkah 1 dari 5</span>
+          <h2 class="step-title">Produk Digital Apa yang Ingin Anda Bangun?</h2>
+          <p class="step-help">Jelaskan ide Anda secara bebas. Tidak perlu teknis. AI Jadi Babu akan membantu menyusun kebutuhan dan struktur produknya.</p>
+          <textarea id="inputIdea" class="field textarea" rows="4" placeholder="Contoh: aplikasi travel journal dengan galeri dokumentasi dan fitur berbagi perjalanan"></textarea>
+          <button class="btn btn-ghost btn-block inspire-btn" type="button" id="inspirationBtn">✨ Butuh Inspirasi?</button>
+          <p class="field-error" id="errIdea">Mohon tuliskan ide Anda dulu ya.</p>
+          <div class="wizard-actions">
+            <button class="btn btn-primary btn-block" data-next>Lanjut</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: NAMA -->
+        <div class="wizard-panel" data-step="2">
+          <span class="step-tag">Langkah 2 dari 5</span>
+          <h2 class="step-title">Beri nama aplikasinya</h2>
+          <p class="step-help">Nama yang singkat dan mudah diingat. Bisa diganti nanti.</p>
+          <input id="inputName" class="field" type="text" placeholder="Contoh: UMKMMart, HaloKlinik, WeddingKu" />
+          <button class="btn btn-ghost btn-block name-btn" type="button" id="nameIdeaBtn">✨ Bingung? Beri Saya Ide Nama</button>
+          <p class="field-error" id="errName">Nama minimal 3 huruf ya.</p>
+          <div class="wizard-actions split">
+            <button class="btn btn-ghost" data-prev>Kembali</button>
+            <button class="btn btn-primary" data-next>Lanjut</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: TUJUAN -->
+        <div class="wizard-panel" data-step="3">
+          <span class="step-tag">Langkah 3 dari 5</span>
+          <h2 class="step-title">Apa tujuan utamanya?</h2>
+          <p class="step-help">Pilih satu yang paling mendekati. Ini membantu AI menganalisis ide Anda.</p>
+          <div class="option-grid" id="goalGrid">
+            <button class="option" data-goal="prospek"><span class="option-ic">🎯</span><span class="option-label">Cari Prospek</span></button>
+            <button class="option" data-goal="booking"><span class="option-ic">📅</span><span class="option-label">Booking</span></button>
+            <button class="option" data-goal="marketplace"><span class="option-ic">🛍️</span><span class="option-label">Marketplace</span></button>
+            <button class="option" data-goal="subscription"><span class="option-ic">🔁</span><span class="option-label">Langganan</span></button>
+            <button class="option" data-goal="produktivitas"><span class="option-ic">⚡</span><span class="option-label">Produktivitas</span></button>
+          </div>
+          <p class="field-error" id="errGoal">Pilih salah satu tujuan ya.</p>
+          <div class="wizard-actions split">
+            <button class="btn btn-ghost" data-prev>Kembali</button>
+            <button class="btn btn-primary" id="toReviewBtn">Analisis Ide Saya</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: AI REVIEW -->
+        <div class="wizard-panel" data-step="4">
+          <span class="step-tag">Langkah 4 dari 5</span>
+          <h2 class="step-title">AI sedang menganalisis ide Anda</h2>
+
+          <!-- Loading konsultan -->
+          <div class="ai-thinking" id="aiThinking">
+            <div class="ai-avatar">🧠</div>
+            <div class="ai-thinking-text">
+              <span class="dot-typing"><i></i><i></i><i></i></span>
+              <p id="thinkingLabel">Membaca ide Anda...</p>
+            </div>
+          </div>
+
+          <!-- Hasil review -->
+          <div class="ai-review" id="aiReview" hidden>
+            <div class="ai-review-head">
+              <span class="ai-cat-badge" id="catBadge"></span>
+            </div>
+            <div id="reviewBlocks"></div>
+            <div class="wizard-actions split">
+              <button class="btn btn-ghost" data-prev>Kembali</button>
+              <button class="btn btn-primary" id="toGenerateBtn">Lanjut ke Generate</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5: PILIH VERSI + GENERATE -->
+        <div class="wizard-panel" data-step="5">
+          <span class="step-tag">Langkah 5 dari 5</span>
+          <h2 class="step-title">Pilih jalur produksi yang ingin dibangun</h2>
+          <p class="step-help">Di App Builder, versi QUICK dan GROWTH sudah terbuka. Versi PRO mendapat jatah 5 kali generate, lalu perlu upgrade untuk lanjut.</p>
+          <a class="btn btn-ghost btn-sm" href="https://www.aksen.in/Nexla-AI/" target="_blank" rel="noreferrer">Lihat Paket PRO</a>
+
+          <div class="ai-picker" aria-label="AI Produksi App Builder">
+            <div class="ai-head">
+              <strong>AI Produksi</strong>
+              <span class="ai-hint">Claude menjadi jalur produksi utama</span>
+            </div>
+            <div class="ai-grid" id="appAiGrid">
+              <button class="ai-card selected" type="button" data-ai="claude" aria-pressed="true">
+                <div class="ai-top">
+                  <span class="ai-ic">🤖</span>
+                  <div class="ai-title-wrap">
+                    <div class="ai-title">Claude</div>
+                    <div class="ai-badges">
+                      <span class="ai-badge ai-badge-rec">Direkomendasikan</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ai-desc">Output rapi untuk Strategist → PRD → Developer, konsisten untuk minta ZIP.</div>
+              </button>
+              <button class="ai-card" type="button" data-ai="trae" aria-pressed="false">
+                <div class="ai-top">
+                  <span class="ai-ic">🛠️</span>
+                  <div class="ai-title-wrap">
+                    <div class="ai-title">TRAE</div>
+                    <div class="ai-badges">
+                      <span class="ai-badge">Opsional</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ai-desc">Setelah output selesai, lanjutkan pengembangan/rapihin kode di TRAE bila diperlukan.</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="version-grid" id="versionGrid">
+            <button class="version-card selected" data-version="QUICK">
+              <span class="version-name">QUICK</span>
+              <span class="version-tag">Static HTML, CSS, JS</span>
+              <span class="version-desc">Jalur paling ringkas untuk landing product, tools ringan, validasi cepat, dan deploy langsung ke Netlify, Scalev, atau cPanel.</span>
+            </button>
+            <button class="version-card" data-version="GROWTH">
+              <span class="version-name">GROWTH</span>
+              <span class="version-tag">PHP + MySQL untuk operasional</span>
+              <span class="version-desc">Cocok saat aplikasi butuh login, data online, dan riwayat pengguna dengan deployment tetap ramah shared hosting.</span>
+            </button>
+            <button class="version-card" data-version="PRO">
+              <span class="version-name">PRO</span>
+              <span class="version-tag">Arsitektur penuh untuk skala lebih besar</span>
+              <span class="version-desc">Untuk sistem modular dengan installer, admin, multi-role, membership, dan alur operasional yang lebih matang.</span>
+            </button>
+          </div>
+          <p class="step-help">QUICK dan GROWTH bisa dipakai bebas. PRO bisa dipakai sampai 5 kali generate, lalu sistem akan minta upgrade.</p>
+
+          <!-- Panduan otomatis sesuai versi -->
+          <div class="guide-box" id="guideBox"></div>
+
+          <div class="wizard-actions split">
+            <button class="btn btn-ghost" data-prev>Kembali</button>
+            <button class="btn btn-primary" id="generateBtn">🚀 Susun 3 Dokumen AI</button>
+          </div>
+        </div>
+
+      </div><!-- /wizard-card -->
+    </div>
+  </section>
+
+  <!-- ===== RESULT ===== -->
+  <section class="result-section" id="result" hidden>
+    <div class="container container-narrow">
+
+      <div class="success-banner">
+        <span class="success-ic">🎉</span>
+        <div>
+          <strong>Selamat! Dokumen AI Anda siap digunakan.</strong>
+          <span>Gunakan tiga output di bawah untuk menyusun strategi, dokumen produk, dan blueprint pengembangan Anda.</span>
+        </div>
+      </div>
+
+      <div class="result-meta" id="resultMeta"></div>
+
+      <div class="guide-box" id="guideBoxResult"></div>
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <div><span class="prompt-num">1</span><h3>Prompt Strategist</h3></div>
+          <button class="btn btn-copy" data-copy="app">📋 Salin</button>
+        </div>
+        <p class="prompt-desc">Tempel ini lebih dulu. Claude akan menyusun strategi dan blueprint produk Anda.</p>
+        <pre class="prompt-body" id="outApp"></pre>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <div><span class="prompt-num">2</span><h3>Prompt PRD Architect</h3></div>
+          <button class="btn btn-copy" data-copy="prd">📋 Salin</button>
+        </div>
+        <p class="prompt-desc">Tempel berikutnya. Claude akan menulis dokumen kebutuhan produk lengkap.</p>
+        <pre class="prompt-body" id="outPrd"></pre>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <div><span class="prompt-num">3</span><h3>Prompt Senior Developer</h3></div>
+          <button class="btn btn-copy" data-copy="dev">📋 Salin</button>
+        </div>
+        <p class="prompt-desc">Tempel terakhir. Claude akan membangun aplikasinya menjadi kode jadi.</p>
+        <pre class="prompt-body" id="outDev"></pre>
+      </div>
+
+      <div class="result-cta">
+        <button class="btn btn-wa btn-block" id="shareWa">💬 Bagikan ke Teman via WhatsApp</button>
+        <button class="btn btn-ghost btn-block" id="restartBtn">Buat Prompt Baru</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARA PAKAI ===== -->
+  <section class="howto-section" id="cara-pakai">
+    <div class="container container-narrow">
+      <div class="note-compact howto-note">
+        <div class="note-pill">Cara Kerja AI Jadi Babu</div>
+        <p class="note-text">AI Jadi Babu membantu mengubah ide menjadi blueprint yang lebih terstruktur. Anda cukup menjelaskan kebutuhan, mengikuti wizard, lalu menggunakan hasil yang dihasilkan untuk membangun, mengembangkan, dan meluncurkan produk digital lebih cepat.</p>
+        <div class="note-tags">
+          <span class="note-tag">Tanpa Coding</span>
+          <span class="note-tag">Blueprint Otomatis</span>
+          <span class="note-tag">Siap Eksekusi</span>
+          <span class="note-tag">Faster Launch</span>
+        </div>
+      </div>
+      <p class="section-sub">Lima langkah sederhana dari ide hingga siap dieksekusi.</p>
+      <ol class="howto-list">
+        <li>
+          <span class="howto-n">1</span>
+          <div class="howto-step">
+            <strong>Ceritakan Ide Anda.</strong>
+            <span class="howto-label">Ceritakan Ide</span>
+            <span class="howto-detail">Jelaskan produk atau sistem yang ingin Anda bangun.</span>
+          </div>
+        </li>
+        <li>
+          <span class="howto-n">2</span>
+          <div class="howto-step">
+            <strong>AI Menyusun Strategi.</strong>
+            <span class="howto-label">AI Menyusun</span>
+            <span class="howto-detail">AI Jadi Babu membantu merumuskan tujuan, fitur, dan struktur produk.</span>
+          </div>
+        </li>
+        <li>
+          <span class="howto-n">3</span>
+          <div class="howto-step">
+            <strong>Blueprint Dibuat.</strong>
+            <span class="howto-label">Blueprint Dibuat</span>
+            <span class="howto-detail">Dokumen produk dan panduan pengembangan disiapkan secara otomatis.</span>
+          </div>
+        </li>
+        <li>
+          <span class="howto-n">4</span>
+          <div class="howto-step">
+            <strong>Bangun Produk.</strong>
+            <span class="howto-label">Bangun Produk</span>
+            <span class="howto-detail">Gunakan blueprint untuk membuat aplikasi lebih cepat.</span>
+          </div>
+        </li>
+        <li>
+          <span class="howto-n">5</span>
+          <div class="howto-step">
+            <strong>Launch dan Kembangkan.</strong>
+            <span class="howto-label">Launch</span>
+            <span class="howto-detail">Publikasikan produk dan lanjutkan pengembangannya sesuai kebutuhan.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+    </div>
+
+    <div class="suite-module" data-suite-module="page">
+      <!-- ===== NEXLA PAGE ===== -->
+      <section class="wizard-section" id="page-wizard">
+        <div class="container container-narrow">
+          <div class="progress">
+            <div class="progress-track"><div class="progress-fill" id="pageProgressFill"></div></div>
+            <div class="progress-steps">
+              <span class="pstep active" data-p="1">Produk</span>
+              <span class="pstep" data-p="2">Detail</span>
+              <span class="pstep" data-p="3">Tujuan</span>
+              <span class="pstep" data-p="4">Gaya</span>
+              <span class="pstep" data-p="5">AI Review</span>
+              <span class="pstep" data-p="6">Generate</span>
+            </div>
+          </div>
+
+          <div class="card wizard-card">
+            <div class="wizard-panel active" data-step="1">
+              <span class="step-tag">Langkah 1 dari 6</span>
+              <h2 class="step-title">Apa yang kamu jual?</h2>
+              <p class="step-help">Tulis produk/jasa utama yang ingin kamu jual lewat salespage.</p>
+              <input id="pageInputProduct" class="field" type="text" placeholder="Contoh: Jasa desain logo, Kursus IELTS, Paket catering rumahan" />
+              <button class="btn btn-ghost btn-block inspire-btn" type="button" id="pageIdeasBtn">✨ Beri Saya Ide</button>
+              <p class="field-error" id="pageErrProduct">Mohon isi produk/jasa kamu dulu ya.</p>
+              <div class="wizard-actions">
+                <button class="btn btn-primary btn-block" data-next>Lanjut</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="2">
+              <span class="step-tag">Langkah 2 dari 6</span>
+              <h2 class="step-title">Ceritakan sedikit tentangnya</h2>
+              <p class="step-help">Masukkan siapa targetnya, keunggulannya, dan hasil yang dijanjikan.</p>
+              <textarea id="pageInputDetail" class="field textarea" rows="4" placeholder="Contoh: untuk UMKM; hasil 7 hari; include revisi 2x; harga mulai 499rb; bisa WA konsultasi"></textarea>
+              <button class="btn btn-ghost btn-block inspire-btn" type="button" id="pageIdeasBtnDetail">✨ Beri Saya Ide</button>
+              <p class="field-error" id="pageErrDetail">Ceritakan sedikit supaya AI bisa menyusun offer dan copy-nya.</p>
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" data-next>Lanjut</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="3">
+              <span class="step-tag">Langkah 3 dari 6</span>
+              <h2 class="step-title">Tujuan salespage ini apa?</h2>
+              <p class="step-help">Pilih satu yang paling mendekati.</p>
+              <div class="option-grid" id="pageGoalGrid">
+                <button class="option" data-goal="jualan"><span class="option-ic">💳</span><span class="option-label">Langsung Jual</span></button>
+                <button class="option" data-goal="prospek"><span class="option-ic">🎯</span><span class="option-label">Kumpulkan Leads</span></button>
+                <button class="option" data-goal="booking"><span class="option-ic">📅</span><span class="option-label">Booking</span></button>
+                <button class="option" data-goal="whatsapp"><span class="option-ic">💬</span><span class="option-label">Chat WhatsApp</span></button>
+                <button class="option" data-goal="info"><span class="option-ic">📣</span><span class="option-label">Info + CTA</span></button>
+              </div>
+              <p class="field-error" id="pageErrGoal">Pilih tujuan salespage dulu ya.</p>
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" id="pageToFrameworkBtn">Lanjut Pilih Gaya</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="4">
+              <span class="step-tag">Langkah 4 dari 6</span>
+              <h2 class="step-title">Gaya salespage seperti apa yang ingin kamu gunakan?</h2>
+          <p class="step-help">Pilih framework sendiri atau minta rekomendasi AI agar strategi penjualanmu lebih terarah. Semua framework salespage sudah terbuka.</p>
+
+              <div class="framework-grid" id="pageFrameworkGrid">
+                <button class="framework-card" type="button" data-framework="aida">
+                  <strong>AIDA</strong>
+                  <span class="framework-flow">Attention → Interest → Desire → Action</span>
+                  <span class="framework-fit">Cocok untuk: Produk umum, UMKM, landing page sederhana</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="pas">
+                  <strong>PAS</strong>
+                  <span class="framework-flow">Problem → Agitate → Solution</span>
+                  <span class="framework-fit">Cocok untuk: Produk yang menyelesaikan masalah, jasa, konsultan</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="bab">
+                  <strong>BAB</strong>
+                  <span class="framework-flow">Before → After → Bridge</span>
+                  <span class="framework-fit">Cocok untuk: Produk transformasi, kursus, coaching</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="4p">
+                  <strong>4P</strong>
+                  <span class="framework-flow">Promise → Picture → Proof → Push</span>
+                  <span class="framework-fit">Cocok untuk: Produk digital, webinar, lead magnet</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="quest">
+                  <strong>QUEST</strong>
+                  <span class="framework-flow">Qualify → Understand → Educate → Stimulate → Transition</span>
+                  <span class="framework-fit">Cocok untuk: Audiens yang perlu edukasi</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="tofu">
+                  <strong>TOFU</strong>
+                  <span class="framework-flow">Top of Funnel</span>
+                  <span class="framework-fit">Cocok untuk: Audiens baru, awareness</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="mofu">
+                  <strong>MOFU</strong>
+                  <span class="framework-flow">Middle of Funnel</span>
+                  <span class="framework-fit">Cocok untuk: Audiens yang sudah kenal, pertimbangan</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="bofu">
+                  <strong>BOFU</strong>
+                  <span class="framework-flow">Bottom of Funnel</span>
+                  <span class="framework-fit">Cocok untuk: Siap membeli, closing</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="vsl">
+                  <strong>VSL</strong>
+                  <span class="framework-flow">Video Sales Letter</span>
+                  <span class="framework-fit">Cocok untuk: Produk harga tinggi, webinar, high ticket</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="advertorial">
+                  <strong>Advertorial</strong>
+                  <span class="framework-flow">Soft selling ala artikel</span>
+                  <span class="framework-fit">Cocok untuk: Native marketing, soft selling</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="longform">
+                  <strong>Long Form Salesletter</strong>
+                  <span class="framework-flow">Penjualan mendalam</span>
+                  <span class="framework-fit">Cocok untuk: Produk kompleks, penjualan mendalam</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="fsp">
+                  <strong>FSP</strong>
+                  <span class="framework-flow">Fakta → Story → Penawaran</span>
+                  <span class="framework-fit">Cocok untuk: Pasar Indonesia, WhatsApp, story selling</span>
+                </button>
+                <button class="framework-card" type="button" data-framework="status-whatsapp">
+                  <strong>Status WhatsApp</strong>
+                  <span class="framework-flow">Promosi singkat dan rutin</span>
+                  <span class="framework-fit">Cocok untuk: Promosi harian, broadcast</span>
+                </button>
+              </div>
+
+              <button class="btn btn-ghost btn-block" type="button" id="pageRecommendFrameworkBtn">✨ Saya Bingung, Pilihkan untuk Saya</button>
+
+              <div class="advisor-box" id="pageAdvisorBox" hidden>
+                <div class="advisor-head">
+                  <strong>AI Konsultan Sales Framework</strong>
+                  <span>Jawab 4 pertanyaan singkat, lalu sistem akan merekomendasikan gaya yang paling pas.</span>
+                </div>
+                <div class="advisor-grid">
+                  <input id="pageAdvisorProduct" class="field" type="text" placeholder="1. Apa yang kamu jual?" />
+                  <input id="pageAdvisorAudience" class="field" type="text" placeholder="2. Siapa target pembelinya?" />
+                  <input id="pageAdvisorPrice" class="field" type="text" placeholder="3. Berapa kisaran harga produk?" />
+                  <select id="pageAdvisorAwareness" class="field">
+                    <option value="">4. Apakah orang sudah mengenal produkmu?</option>
+                    <option value="baru">Belum, audiens masih baru</option>
+                    <option value="sedikit">Sebagian sudah tahu</option>
+                    <option value="sudah">Ya, sudah cukup kenal</option>
+                  </select>
+                </div>
+                <div class="wizard-actions split">
+                  <button class="btn btn-ghost" type="button" id="pageAdvisorCloseBtn">Tutup</button>
+                  <button class="btn btn-primary" type="button" id="pageAdvisorRunBtn">Analisis Framework</button>
+                </div>
+                <div class="advisor-result" id="pageAdvisorResult" hidden></div>
+              </div>
+
+              <p class="field-error" id="pageErrFramework">Pilih framework dulu atau gunakan rekomendasi AI.</p>
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" id="pageToReviewBtn">Analisis Salespage Saya</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="5">
+              <span class="step-tag">Langkah 5 dari 6</span>
+              <h2 class="step-title">AI sedang menyusun offer & angle jualan</h2>
+              <div class="ai-thinking" id="pageAiThinking">
+                <div class="ai-avatar">🧾</div>
+                <div class="ai-thinking-text">
+                  <span class="dot-typing"><i></i><i></i><i></i></span>
+                  <p id="pageThinkingLabel">Membaca detail produk/jasa...</p>
+                </div>
+              </div>
+
+              <div class="ai-review" id="pageAiReview" hidden>
+                <div class="ai-review-head">
+                  <span class="ai-cat-badge" id="pageBadge">🧾 Salespage Builder Review</span>
+                </div>
+                <div id="pageReviewBlocks"></div>
+                <div class="wizard-actions split">
+                  <button class="btn btn-ghost" data-prev>Kembali</button>
+                  <button class="btn btn-primary" id="pageToGenerateBtn">Lanjut ke Generate</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="6">
+              <span class="step-tag">Langkah 6 dari 6</span>
+              <h2 class="step-title">Susun 3 Dokumen AI</h2>
+              <p class="step-help">Output: Offer Strategist · Copywriter Architect · Salespage Developer + Panduan Produksi sampai online, sesuai framework yang Anda pilih.</p>
+          <div class="ai-picker" aria-label="AI Produksi Salespage Builder">
+                <div class="ai-head">
+                  <strong>AI Produksi</strong>
+                  <span class="ai-hint">Pilih AI yang kamu paling nyaman</span>
+                </div>
+                <div class="ai-grid" id="pageAiGrid">
+                  <button class="ai-card selected" type="button" data-ai="claude" aria-pressed="true">
+                    <div class="ai-top">
+                      <span class="ai-ic">🤖</span>
+                      <div class="ai-title-wrap">
+                        <div class="ai-title">Claude</div>
+                        <div class="ai-badges">
+                          <span class="ai-badge">Kuat untuk copy premium</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ai-desc">Bahasa natural, struktur rapi, enak untuk offer + copy + HTML.</div>
+                  </button>
+                  <button class="ai-card" type="button" data-ai="deepseek" aria-pressed="false">
+                    <div class="ai-top">
+                      <span class="ai-ic">⚡</span>
+                      <div class="ai-title-wrap">
+                        <div class="ai-title">DeepSeek</div>
+                        <div class="ai-badges">
+                          <span class="ai-badge">Cepat untuk iterasi</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ai-desc">Bagus untuk variasi angle/copy dan output code cepat.</div>
+                  </button>
+                </div>
+              </div>
+              <div class="guide-box" id="pageGuideBox"></div>
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" id="pageGenerateBtn">🚀 Susun 3 Dokumen AI</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="result-section" id="pageResult" hidden>
+        <div class="container container-narrow">
+          <div class="success-banner">
+            <span class="success-ic">🎉</span>
+            <div>
+              <strong>Selamat! Dokumen AI sales page Anda siap digunakan.</strong>
+              <span>Gunakan tiga output di bawah untuk menyusun positioning, copy, dan struktur halaman penjualan Anda.</span>
+            </div>
+          </div>
+
+          <div class="result-meta" id="pageResultMeta"></div>
+          <div class="guide-box" id="pageGuideBoxResult"></div>
+
+          <div class="prompt-card">
+            <div class="prompt-head">
+              <div><span class="prompt-num">1</span><h3>Prompt Offer Strategist</h3></div>
+              <button class="btn btn-copy" data-copy="offer">📋 Salin</button>
+            </div>
+            <p class="prompt-desc">Tempel ini lebih dulu. AI akan memetakan positioning, target market, dan angle jualan.</p>
+            <pre class="prompt-body" id="pageOutOffer"></pre>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-head">
+              <div><span class="prompt-num">2</span><h3>Prompt Copywriter Architect</h3></div>
+              <button class="btn btn-copy" data-copy="copy">📋 Salin</button>
+            </div>
+            <p class="prompt-desc">Tempel berikutnya. AI akan menulis headline, body copy, CTA, FAQ, dan struktur salespage.</p>
+            <pre class="prompt-body" id="pageOutCopy"></pre>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-head">
+              <div><span class="prompt-num">3</span><h3>Prompt Salespage Developer</h3></div>
+              <button class="btn btn-copy" data-copy="dev">📋 Salin</button>
+            </div>
+            <p class="prompt-desc">Tempel terakhir. AI akan membangun salespage menjadi ZIP siap deploy.</p>
+            <pre class="prompt-body" id="pageOutDev"></pre>
+          </div>
+
+          <div class="result-cta">
+            <button class="btn btn-wa btn-block" id="pageShareWa">💬 Bagikan ke Teman via WhatsApp</button>
+            <button class="btn btn-ghost btn-block" id="pageRestartBtn">Buat Prompt Baru</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="howto-section" id="page-howto">
+        <div class="container container-narrow">
+          <h2 class="section-title">Panduan Produksi Salespage Builder</h2>
+          <p class="section-sub">Dari prompt sampai salespage online dengan opsi deploy yang mudah.</p>
+          <ol class="howto-list">
+            <li><span class="howto-n">1</span><div><strong>Tentukan framework salespage.</strong> Pilih sendiri atau minta rekomendasi AI berdasarkan produk, target, harga, dan awareness.</div></li>
+            <li><span class="howto-n">2</span><div><strong>Tempel Prompt Offer Strategist.</strong> Dapatkan positioning, target market, angle penjualan, dan offer.</div></li>
+            <li><span class="howto-n">3</span><div><strong>Tempel Prompt Copywriter Architect.</strong> Dapatkan headline, body copy, CTA, FAQ, dan struktur salespage.</div></li>
+            <li><span class="howto-n">4</span><div><strong>Tempel Prompt Salespage Developer.</strong> Minta output file lengkap + ZIP siap deploy (HTML/CSS/JS).</div></li>
+            <li><span class="howto-n">5</span><div><strong>Download ZIP dari AI lalu deploy.</strong> Pilih Netlify, Scalev, atau cPanel File Manager sesuai workflow kamu.</div></li>
+          </ol>
+        </div>
+      </section>
+    </div>
+
+    <div class="suite-module" data-suite-module="form">
+      <!-- ===== NEXLA FORM ===== -->
+      <section class="wizard-section" id="form-wizard">
+        <div class="container container-narrow">
+          <div class="progress">
+            <div class="progress-track"><div class="progress-fill" id="formProgressFill"></div></div>
+            <div class="progress-steps">
+              <span class="pstep active" data-p="1">Jenis</span>
+              <span class="pstep" data-p="2">Tujuan</span>
+              <span class="pstep" data-p="3">Field</span>
+              <span class="pstep" data-p="4">Integrasi</span>
+              <span class="pstep" data-p="5">AI Review</span>
+              <span class="pstep" data-p="6">Generate</span>
+            </div>
+          </div>
+
+          <div class="card wizard-card">
+            <div class="wizard-panel active" data-step="1">
+              <span class="step-tag">Langkah 1 dari 6</span>
+              <h2 class="step-title">Jenis form apa yang kamu butuhkan?</h2>
+              <p class="step-help">Pilih tipe form. Nanti bisa disesuaikan lagi.</p>
+              <select id="formType" class="field">
+                <option value="">Pilih jenis form…</option>
+                <option value="kontak">Form Kontak</option>
+                <option value="booking">Form Booking / Reservasi</option>
+                <option value="registrasi">Form Registrasi</option>
+                <option value="survey">Form Survey</option>
+                <option value="order">Form Order / Pemesanan</option>
+                <option value="webinar">Form Webinar</option>
+                <option value="lead">Form Lead / Konsultasi</option>
+                <option value="lamaran">Form Submit Application</option>
+              </select>
+              <button class="btn btn-ghost btn-block inspire-btn" type="button" id="formIdeasBtnType">✨ Beri Saya Ide</button>
+              <p class="field-error" id="formErrType">Pilih jenis form dulu ya.</p>
+              <div class="wizard-actions">
+                <button class="btn btn-primary btn-block" data-next>Lanjut</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="2">
+              <span class="step-tag">Langkah 2 dari 6</span>
+              <h2 class="step-title">Apa tujuan form ini?</h2>
+              <p class="step-help">Contoh: kumpulkan leads, booking jadwal, order via WhatsApp, atau pre-screen calon klien.</p>
+              <textarea id="formPurpose" class="field textarea" rows="4" placeholder="Contoh: calon klien isi nama, WA, kebutuhan; lalu saya follow up. Ada validasi WA."></textarea>
+              <button class="btn btn-ghost btn-block inspire-btn" type="button" id="formIdeasBtnPurpose">✨ Beri Saya Ide</button>
+              <p class="field-error" id="formErrPurpose">Mohon tulis tujuan form supaya AI bisa menyusun field yang tepat.</p>
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" data-next>Lanjut</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="3">
+              <span class="step-tag">Langkah 3 dari 6</span>
+              <h2 class="step-title">Field apa saja yang dibutuhkan?</h2>
+              <p class="step-help">Pilih field inti. Anda juga bisa menambahkan field custom.</p>
+
+              <div class="field-chip-grid" id="formFieldsGrid">
+                <button class="chip" type="button" data-field="nama">Nama</button>
+                <button class="chip" type="button" data-field="wa">No WhatsApp</button>
+                <button class="chip" type="button" data-field="email">Email</button>
+                <button class="chip" type="button" data-field="kota">Kota</button>
+                <button class="chip" type="button" data-field="alamat">Alamat</button>
+                <button class="chip" type="button" data-field="perusahaan">Perusahaan</button>
+                <button class="chip" type="button" data-field="jabatan">Jabatan</button>
+                <button class="chip" type="button" data-field="kebutuhan">Kebutuhan</button>
+                <button class="chip" type="button" data-field="tanggal">Tanggal</button>
+                <button class="chip" type="button" data-field="jam">Jam</button>
+                <button class="chip" type="button" data-field="jumlah">Jumlah</button>
+                <button class="chip" type="button" data-field="catatan">Catatan</button>
+              </div>
+
+              <textarea id="formCustomFields" class="field textarea" rows="4" placeholder="Field custom (opsional). Tulis per baris. Contoh: Nama Instansi, Budget, Link Instagram"></textarea>
+              <p class="field-error" id="formErrFields">Pilih minimal 1 field (atau isi field custom).</p>
+
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" data-next>Lanjut</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="4">
+              <span class="step-tag">Langkah 4 dari 6</span>
+              <h2 class="step-title">Integrasi Bisnis (Opsional)</h2>
+              <p class="step-help">Semua integrasi utama sudah terbuka: WhatsApp Fonnte, Facebook Pixel, dan Google Spreadsheet.</p>
+
+              <div class="integration-card">
+                <div class="integration-head">
+                  <strong>Facebook Pixel</strong>
+                  <label class="toggle">
+                    <input type="checkbox" id="formPixelToggle" />
+                    <span>Aktifkan</span>
+                  </label>
+                </div>
+                <div class="integration-body" id="formPixelBody" hidden>
+                  <input id="formPixelId" class="field" type="text" placeholder="Facebook Pixel ID (contoh: 123456789012345)" />
+                  <select id="formPixelEvent" class="field">
+                    <option value="">Pilih event…</option>
+                    <option value="Lead">Lead</option>
+                    <option value="CompleteRegistration">CompleteRegistration</option>
+                    <option value="Purchase">Purchase</option>
+                    <option value="Contact">Contact</option>
+                    <option value="SubmitApplication">SubmitApplication</option>
+                    <option value="Custom">Custom Event</option>
+                  </select>
+                  <input id="formPixelCustomEvent" class="field" type="text" placeholder="Nama Custom Event (contoh: FormSubmitted)" hidden />
+                  <div class="hint" id="formPixelHint">Rekomendasi event akan muncul di sini.</div>
+                  <p class="field-error" id="formErrPixel">Jika Pixel diaktifkan, mohon isi Pixel ID dan event.</p>
+                </div>
+              </div>
+
+              <div class="integration-card">
+                <div class="integration-head">
+                  <strong>WhatsApp Notification (Fonnte)</strong>
+                  <label class="toggle">
+                    <input type="checkbox" id="formWaToggle" />
+                    <span>Aktifkan</span>
+                  </label>
+                </div>
+                <div class="integration-body" id="formWaBody" hidden>
+                  <input id="formFonnteToken" class="field" type="password" placeholder="Fonnte API Token" />
+                  <div class="status-row">
+                    <span class="status-pill off" id="formWaStatusBadge">Belum Terhubung</span>
+                    <button class="btn btn-ghost" type="button" id="formWaTestBtn">Tes Koneksi</button>
+                  </div>
+                  <div class="hint">Tes Koneksi akan mengirim pesan ke WhatsApp Anda: <b>Test Berhasil Connect. Sudah Connect Bosku !</b></div>
+                  <div class="check-row">
+                    <label class="check"><input type="checkbox" id="formWaToAdmin" checked /> <span>Admin</span></label>
+                    <label class="check"><input type="checkbox" id="formWaToUser" checked /> <span>Pengisi Form</span></label>
+                  </div>
+                  <textarea id="formWaTemplateAdmin" class="field textarea" rows="6">Ada data masuk baru.
+
+Nama: {{nama}}
+No WA: {{wa}}
+Email: {{email}}
+
+Silakan segera follow up.</textarea>
+                  <textarea id="formWaTemplateUser" class="field textarea" rows="5">Terima kasih, {{nama}}.
+
+Data Anda sudah kami terima.
+Tim kami akan segera menghubungi Anda.</textarea>
+                  <p class="field-error" id="formErrWa">Jika notifikasi WhatsApp diaktifkan, mohon isi token Fonnte dan minimal 1 penerima.</p>
+                </div>
+              </div>
+
+              <div class="integration-card">
+                <div class="integration-head">
+                  <strong>Google Spreadsheet (Apps Script Web App)</strong>
+                  <label class="toggle">
+                    <input type="checkbox" id="formSheetToggle" />
+                    <span>Aktifkan</span>
+                  </label>
+                </div>
+                <div class="integration-body" id="formSheetBody" hidden>
+                  <input id="formAppsScriptUrl" class="field" type="url" placeholder="Google Apps Script Web App URL (contoh: https://script.google.com/macros/s/xxxxxxxx/exec)" />
+                  <div class="hint">Masukkan URL Web App Apps Script Anda, lalu tes koneksi untuk memastikan data form bisa masuk ke spreadsheet.</div>
+                  <div class="status-row">
+                    <span class="status-pill off" id="formSheetStatusBadge">Belum Terhubung</span>
+                    <div class="status-actions">
+                      <button class="btn btn-ghost" type="button" id="formSheetSetupBtn">Cara Setup</button>
+                      <button class="btn btn-ghost" type="button" id="formSheetTestBtn">Tes Koneksi</button>
+                    </div>
+                  </div>
+                  <p class="field-error" id="formErrSheet">Jika Spreadsheet diaktifkan, mohon isi URL Web App Apps Script.</p>
+                </div>
+              </div>
+
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" id="formToReviewBtn">Analisis Form Saya</button>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="5">
+              <span class="step-tag">Langkah 5 dari 6</span>
+              <h2 class="step-title">AI sedang menyusun struktur form</h2>
+              <div class="ai-thinking" id="formAiThinking">
+                <div class="ai-avatar">📝</div>
+                <div class="ai-thinking-text">
+                  <span class="dot-typing"><i></i><i></i><i></i></span>
+                  <p id="formThinkingLabel">Membaca tujuan form...</p>
+                </div>
+              </div>
+
+              <div class="ai-review" id="formAiReview" hidden>
+                <div class="ai-review-head">
+                  <span class="ai-cat-badge" id="formBadge">📝 Form Builder Review</span>
+                </div>
+                <div id="formReviewBlocks"></div>
+                <div class="wizard-actions split">
+                  <button class="btn btn-ghost" data-prev>Kembali</button>
+                  <button class="btn btn-primary" id="formToGenerateBtn">Lanjut ke Generate</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-panel" data-step="6">
+              <span class="step-tag">Langkah 6 dari 6</span>
+              <h2 class="step-title">Susun 3 Dokumen AI</h2>
+              <p class="step-help">Output: Form Strategist · Form Architect · Form Developer + Panduan Produksi + Panduan Deploy.</p>
+          <div class="ai-picker" aria-label="AI Produksi Form Builder">
+                <div class="ai-head">
+                  <strong>AI Produksi</strong>
+                  <span class="ai-hint">Pilih AI yang kamu paling nyaman</span>
+                </div>
+                <div class="ai-grid" id="formAiGrid">
+                  <button class="ai-card selected" type="button" data-ai="claude" aria-pressed="true">
+                    <div class="ai-top">
+                      <span class="ai-ic">🤖</span>
+                      <div class="ai-title-wrap">
+                        <div class="ai-title">Claude</div>
+                        <div class="ai-badges">
+                          <span class="ai-badge">Kuat untuk UX</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ai-desc">Bagus untuk validasi, copy UI yang rapi, dan flow yang nyaman di HP.</div>
+                  </button>
+                  <button class="ai-card" type="button" data-ai="deepseek" aria-pressed="false">
+                    <div class="ai-top">
+                      <span class="ai-ic">⚡</span>
+                      <div class="ai-title-wrap">
+                        <div class="ai-title">DeepSeek</div>
+                        <div class="ai-badges">
+                          <span class="ai-badge">Cepat untuk code</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ai-desc">Cocok kalau kamu butuh output HTML/CSS/JS cepat dan iterasi singkat.</div>
+                  </button>
+                  <button class="ai-card" type="button" data-ai="trae" aria-pressed="false">
+                    <div class="ai-top">
+                      <span class="ai-ic">🛠️</span>
+                      <div class="ai-title-wrap">
+                        <div class="ai-title">TRAE</div>
+                        <div class="ai-badges">
+                          <span class="ai-badge">Lanjutkan di IDE</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ai-desc">Paling enak untuk lanjutkan edit, rapihin, debug, dan maintain code setelahnya.</div>
+                  </button>
+                </div>
+              </div>
+              <div class="guide-box" id="formGuideBox"></div>
+              <div class="wizard-actions split">
+                <button class="btn btn-ghost" data-prev>Kembali</button>
+                <button class="btn btn-primary" id="formGenerateBtn">🚀 Susun 3 Dokumen AI</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="result-section" id="formResult" hidden>
+        <div class="container container-narrow">
+          <div class="success-banner">
+            <span class="success-ic">🎉</span>
+            <div>
+              <strong>Selamat! Dokumen AI form Anda siap digunakan.</strong>
+              <span>Gunakan tiga output di bawah untuk menyusun struktur, logika, dan implementasi form Anda.</span>
+            </div>
+          </div>
+
+          <div class="result-meta" id="formResultMeta"></div>
+          <div class="guide-box" id="formGuideBoxResult"></div>
+
+          <div class="prompt-card">
+            <div class="prompt-head">
+              <div><span class="prompt-num">1</span><h3>Prompt Form Strategist</h3></div>
+              <button class="btn btn-copy" data-copy="strategy">📋 Salin</button>
+            </div>
+            <p class="prompt-desc">Tempel ini lebih dulu. AI akan menyusun field, flow, dan CTA.</p>
+            <pre class="prompt-body" id="formOutStrategy"></pre>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-head">
+              <div><span class="prompt-num">2</span><h3>Prompt Form Architect</h3></div>
+              <button class="btn btn-copy" data-copy="arch">📋 Salin</button>
+            </div>
+            <p class="prompt-desc">Tempel berikutnya. AI akan menyusun struktur UI, validasi, dan state.</p>
+            <pre class="prompt-body" id="formOutArch"></pre>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-head">
+              <div><span class="prompt-num">3</span><h3>Prompt Form Developer</h3></div>
+              <button class="btn btn-copy" data-copy="dev">📋 Salin</button>
+            </div>
+            <p class="prompt-desc">Tempel terakhir. AI akan membangun form jadi ZIP siap deploy.</p>
+            <pre class="prompt-body" id="formOutDev"></pre>
+          </div>
+
+          <div class="result-cta">
+            <button class="btn btn-wa btn-block" id="formShareWa">💬 Bagikan ke Teman via WhatsApp</button>
+            <button class="btn btn-ghost btn-block" id="formRestartBtn">Buat Prompt Baru</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="howto-section" id="form-howto">
+        <div class="container container-narrow">
+          <h2 class="section-title">Panduan Produksi Form Builder</h2>
+          <p class="section-sub">Dari form sampai operasional berjalan otomatis (Spreadsheet, WhatsApp, Pixel) dengan opsi deploy yang mudah.</p>
+          <ol class="howto-list">
+            <li><span class="howto-n">1</span><div><strong>Tempel Prompt Form Strategist.</strong> Dapatkan rancangan field, validasi, dan CTA.</div></li>
+            <li><span class="howto-n">2</span><div><strong>Tempel Prompt Form Architect.</strong> Dapatkan struktur halaman, state, dan alur submit.</div></li>
+            <li><span class="howto-n">3</span><div><strong>Tempel Prompt Form Developer.</strong> Minta output file lengkap + ZIP siap deploy + template Apps Script (jika pakai Spreadsheet) + integrasi Fonnte/Pixel (jika diaktifkan).</div></li>
+            <li><span class="howto-n">4</span><div><strong>Deploy sesuai mode:</strong> Static (Netlify/Scalev/cPanel) atau Integrasi (default cPanel karena butuh endpoint backend).</div></li>
+            <li><span class="howto-n">5</span><div><strong>Uji end-to-end:</strong> submit form → Spreadsheet terisi → WhatsApp terkirim → Pixel tercatat → halaman sukses tampil.</div></li>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">AI Jadi Babu</p>
+      <p class="footer-tag">Ide Lebih Cepat. Eksekusi Lebih Jelas.</p>
+      <p class="footer-meta">Designed by <a class="footer-link" href="https://wa.me/6285722224391" target="_blank" rel="noreferrer">Abdul Fardi</a> <span class="footer-sep">·</span> Supported by <a class="footer-link" href="https://adysheva.com/" target="_blank" rel="noreferrer">Ady Sheva</a></p>
+    </div>
+  </footer>
+
+  <div class="modal" id="ideasModal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-ideas-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="ideasModalTitle">
+      <div class="modal-head">
+        <div>
+          <h3 class="modal-title" id="ideasModalTitle">Inspirasi Ide Bisnis Digital</h3>
+          <p class="modal-sub">Pilih ide siap pakai, lalu klik "Gunakan Ide Ini" untuk mengisi otomatis.</p>
+        </div>
+        <button class="icon-btn" type="button" data-ideas-close aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="ideas-controls">
+          <input class="field" id="ideasSearch" type="search" placeholder="Cari ide… (contoh: booking, UMKM, klinik, kursus)" autocomplete="off" />
+          <div class="ideas-filters">
+            <select class="field" id="ideasCategory" aria-label="Filter kategori"></select>
+            <select class="field" id="ideasProfession" aria-label="Rekomendasi berdasarkan profesi"></select>
+          </div>
+          <div class="ideas-actions">
+            <button class="btn btn-ghost" type="button" id="ideasRandomBtn">🎲 Ide Acak</button>
+            <button class="btn btn-primary" type="button" id="ideasClearBtn">Reset Filter</button>
+          </div>
+        </div>
+
+        <div class="ideas-list" id="ideasList" role="list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="nameModal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-name-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="nameModalTitle">
+      <div class="modal-head">
+        <div>
+          <h3 class="modal-title" id="nameModalTitle">AI Nama Aplikasi</h3>
+          <p class="modal-sub">Kami buatkan ide nama berdasarkan ide aplikasi Anda. Klik "Gunakan Nama Ini" untuk isi otomatis.</p>
+        </div>
+        <button class="icon-btn" type="button" data-name-close aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="name-topbar">
+          <div class="name-idea-preview" id="nameIdeaPreview"></div>
+          <button class="btn btn-ghost" type="button" id="nameRefreshBtn">↻ Perbarui</button>
+        </div>
+        <div class="name-groups" id="nameList"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="pageIdeasModal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-page-ideas-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="pageIdeasModalTitle">
+      <div class="modal-head">
+        <div>
+          <h3 class="modal-title" id="pageIdeasModalTitle">Inspirasi Ide Salespage Builder</h3>
+          <p class="modal-sub">Pilih ide berdasarkan kategori, lalu edit sesuai produk/jasa Anda.</p>
+        </div>
+        <button class="icon-btn" type="button" data-page-ideas-close aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="ideas-controls">
+          <select class="field" id="pageIdeasCategory" aria-label="Filter kategori ide salespage"></select>
+          <div class="ideas-actions">
+            <button class="btn btn-ghost" type="button" id="pageIdeasRandomBtn">🎲 Ide Acak</button>
+            <button class="btn btn-primary" type="button" id="pageIdeasResetBtn">Reset</button>
+          </div>
+        </div>
+        <div class="ideas-list" id="pageIdeasList" role="list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="formSheetSetupModal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-form-sheet-setup-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="formSheetSetupTitle">
+      <div class="modal-head">
+        <div>
+          <h3 class="modal-title" id="formSheetSetupTitle">Cara Mendapatkan Google Apps Script URL</h3>
+          <p class="modal-sub">Fokus ke URL yang berakhiran /exec.</p>
+        </div>
+        <button class="icon-btn" type="button" data-form-sheet-setup-close aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="setup-grid">
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">1</span><strong>Buat Spreadsheet Baru</strong></div>
+            <div class="setup-desc"><a class="setup-link" href="https://docs.google.com/spreadsheets/u/0/" target="_blank" rel="noreferrer">https://docs.google.com/spreadsheets/u/0/</a></div>
+          </div>
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">2</span><strong>Pilih Blank Spreadsheet</strong></div>
+            <div class="setup-desc">Klik: Blank (Spreadsheet kosong). Boleh ganti nama sesuai bisnis Anda.</div>
+          </div>
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">3</span><strong>Buka Apps Script dari Spreadsheet</strong></div>
+            <div class="setup-desc">Di Spreadsheet: Extensions → Apps Script. Ini memastikan script terhubung langsung ke Spreadsheet Anda.</div>
+          </div>
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">4</span><strong>Copy Script (Otomatis)</strong></div>
+            <div class="setup-desc">Klik tombol di bawah untuk menyalin script yang sudah disesuaikan dengan field form Anda.</div>
+            <button class="btn btn-primary btn-block" type="button" id="formSheetCopyCodeBtn">Copy Script</button>
+          </div>
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">5</span><strong>Tempel Script</strong></div>
+            <div class="setup-desc">Paste ke Code.gs (hapus isi lama jika ada), lalu klik Save.</div>
+          </div>
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">6</span><strong>Deploy Web App</strong></div>
+            <div class="setup-desc">Deploy → New deployment → Web app<br/>Execute as: Me, Access: Anyone</div>
+          </div>
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">7</span><strong>Salin URL /exec</strong></div>
+            <div class="setup-desc">Salin URL yang berakhiran /exec dari deployment Web App.</div>
+          </div>
+          <div class="setup-card">
+            <div class="setup-top"><span class="setup-n">8</span><strong>Tempel ke Form Builder + Tes Koneksi</strong></div>
+            <div class="setup-desc">Masukkan ke kolom Google Apps Script URL, lalu klik Tes Koneksi sampai status Berhasil Terhubung.</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" type="button" data-form-sheet-setup-close>Tutup</button>
+        <button class="btn btn-primary" type="button" id="formSheetOpenSheetsBtn">Buka Google Spreadsheet</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="formIdeasModal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-form-ideas-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="formIdeasModalTitle">
+      <div class="modal-head">
+        <div>
+          <h3 class="modal-title" id="formIdeasModalTitle">Inspirasi Form Builder</h3>
+          <p class="modal-sub">Pilih template siap pakai, lalu edit sesuai bisnismu.</p>
+        </div>
+        <button class="icon-btn" type="button" data-form-ideas-close aria-label="Tutup">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="ideas-controls">
+          <select class="field" id="formIdeasCategory" aria-label="Filter kategori ide form"></select>
+          <div class="ideas-actions">
+            <button class="btn btn-ghost" type="button" id="formIdeasRandomBtn">🎲 Ide Acak</button>
+            <button class="btn btn-primary" type="button" id="formIdeasResetBtn">Reset</button>
+          </div>
+        </div>
+        <div class="ideas-list" id="formIdeasList" role="list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-gate" id="authGate" hidden aria-hidden="true">
+    <div class="auth-gate-backdrop"></div>
+    <div class="auth-gate-card" role="dialog" aria-modal="true" aria-labelledby="authGateTitle">
+      <div class="auth-gate-logo" aria-hidden="true">
+        <span class="brand-mark">J</span>
+        <span class="brand-text">AI Jadi <span class="brand-sub">Babu</span></span>
+      </div>
+      <h2 class="auth-gate-title" id="authGateTitle">Masukkan Password</h2>
+      <p class="auth-gate-sub">Masukkan password untuk mengakses AI Jadi Babu.</p>
+      <form class="auth-gate-form" id="authGateForm" novalidate>
+        <input class="field" id="authPasswordInput" type="password" placeholder="Password" autocomplete="current-password" />
+        <p class="auth-gate-error" id="authGateError" role="alert" aria-live="polite"></p>
+        <button class="btn btn-primary btn-block" type="submit" id="authSubmitBtn">Masuk</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="categories.js"></script>
+  <script src="app-builder.js"></script>
+  <script src="prd.js"></script>
+  <script src="developer.js"></script>
+  <script src="ideas.js"></script>
+  <script src="name-generator.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
